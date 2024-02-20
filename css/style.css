@@ -1,0 +1,976 @@
+@charset "UTF-8";
+
+
+/* ヘッダー全体のスタイル */
+html,
+ul,
+li hr {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+}
+
+hr {
+  border: 1px solid #000;
+}
+
+/* 全体のスタイル */
+body {
+  margin: 0 5% 0 5%;
+  padding: 0;
+  font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝', 'Yu Mincho', '游明朝体', 'YuMincho', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+  border-left: 3px solid #000;
+  border-right: 3px solid #000;
+  max-width: 100%;
+}
+
+/* ヘッダースタイル */
+.header {
+  color: #333;
+  padding: 10px 0;
+}
+
+.header-wrapper {
+  display: flex;
+  /* 要素を横並びに配置 */
+  justify-content: space-between;
+  /* 要素間のスペースを均等に配置 */
+  align-items: center;
+  /* 要素を垂直方向に中央揃え */
+  margin: 0 auto;
+  /* 中央揃え */
+}
+
+.header-wrapper a {
+  color: #333;
+}
+
+.navigation-main a {
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.3s;
+}
+
+/* マウスホバー時のリンクスタイル */
+.navigation-main a:hover {
+  border-bottom-color: #333;
+  /* マウスホバー時に下線の色を変更 */
+}
+
+.header-logo img {
+  width: 20%;
+  /* 画像の最大幅 */
+  height: auto;
+  /* 高さを自動調整 */
+  margin: auto;
+  /* ロゴを水平方向に中央配置 */
+}
+
+.navigation-main {
+  list-style: none;
+  display: flex;
+  /* リスト項目を横並びに配置 */
+  margin: 0;
+  padding: 0;
+}
+
+.navigation-main li {
+  margin-right: 50px;
+  font-size: 1vw;
+}
+
+.navigation-main a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navigation-main li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.navigation-main li a:hover {
+  border-bottom: 1px solid #000;
+  /* マウスホバー時に下線を表示 */
+}
+
+/*ハンバーガーメニュー*/
+.hamburger-nav {
+  display: block;
+  width: 20%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: -500px;
+  bottom: 0;
+  transition: all 0.5s;
+  z-index: 3;
+  opacity: 0;
+  padding: 20px;
+}
+
+.open nav {
+  left: 0;
+  opacity: 1;
+}
+
+.hamburger-nav ul {
+  list-style: none;
+  margin-top: 20%;
+  padding: 0;
+}
+
+.hamburger-nav ul li {
+  margin: 0;
+  border-bottom: 0;
+  text-align: center;
+}
+
+.hamburger-nav a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  font-size: 1vw;
+  padding: 3rem;
+  transition-duration: 0.3s;
+  margin-top: 10%;
+}
+
+.hamburger-nav ul li a:hover {
+  background-color: #888;
+}
+
+.toggle-btn {
+  display: block;
+  position: fixed;
+  top: 5%;
+  left: 1.5%;
+  width: 30px;
+  height: 26px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  transition: all 0.5s;
+  border-radius: 4px;
+  border-bottom: 1px solid #000;
+}
+
+.toggle-btn span:nth-child(1) {
+  top: 1%;
+}
+
+.toggle-btn span:nth-child(2) {
+  top: 50%;
+}
+
+.toggle-btn span:nth-child(3) {
+  bottom: 1%;
+}
+
+.open .toggle-btn span:nth-child(1) {
+  transform: translateY(0.6rem) rotate(-315deg);
+}
+
+.open .toggle-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+.open .toggle-btn span:nth-child(3) {
+  transform: translateY(-0.9rem) rotate(315deg);
+}
+
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+#top-link {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 95%;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  padding-left: 0.5%;
+  font-size: 1vw;
+  animation: slideInFromLeft 0.5s ease forwards;
+  /* アニメーションを適用 */
+}
+
+#top-link img {
+  width: 100%;
+  position: relative;
+}
+
+#top-link {
+  transition: transform 0.3s;
+  /* アニメーション時間を設定 */
+}
+
+#top-link:hover {
+  animation: bounce 0.5s;
+  /* ホバー時に跳ねるアニメーションを適用 */
+}
+
+/* キーフレームアニメーションを定義 */
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+    /* 初期位置 */
+  }
+
+  40% {
+    transform: translateY(-20px);
+    /* 上に跳ねる */
+  }
+
+  60% {
+    transform: translateY(-10px);
+    /* 下に跳ねる */
+  }
+}
+
+/* 非表示スタイル */
+#scroll-link.hidden {
+  opacity: 0;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(50px);
+    /* 初期位置（左からスライド） */
+    opacity: 0;
+    /* 初期状態は透明 */
+  }
+
+  100% {
+    transform: translateX(0);
+    /* 最終位置（左からスライドせずに表示） */
+    opacity: 1;
+    /* 完全に表示された状態 */
+  }
+}
+
+/* メインビジュアル */
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 5% 0 5%;
+  object-fit: cover;
+}
+
+.main-visual img.hitujibungaku {
+  width: 70%;
+  height: auto;
+}
+
+/* 重ねる画像のスタイル */
+.main-visual img.hituji,
+.main-visual img.bun,
+.main-visual img.gaku {
+  position: absolute;
+  width: 12%;
+  height: auto;
+}
+
+/* 重ねる画像の位置 */
+.main-visual img.hituji {
+  top: 13%;
+  left: 51%;
+  opacity: 0;
+  /* 最初は透明にする */
+  transform: translateX(100%);
+  /* 右からスライドインするようにする */
+  transition: opacity 1s, transform 1s;
+  /* アニメーションの時間を1秒に設定 */
+}
+
+.main-visual img.bun {
+  top: 33%;
+  left: 65%;
+  opacity: 0;
+  opacity: 0;
+  /* 最初は透明にする */
+  transform: translateX(100%);
+  /* 右からスライドインするようにする */
+  transition: opacity 1s, transform 1s;
+  /* アニメーションの時間を1秒に設定 */
+}
+
+.main-visual img.gaku {
+  top: 60%;
+  left: 78%;
+  opacity: 0;
+  opacity: 0;
+  /* 最初は透明にする */
+  transform: translateX(100%);
+  /* 右からスライドインするようにする */
+  transition: opacity 1s, transform 1s;
+  /* アニメーションの時間を1秒に設定 */
+}
+
+
+/*ニュース*/
+#info,
+#info2,
+#info3,
+#info4 {
+  display: none;
+}
+
+/*モーダルの横幅を変更したい場合*/
+.modaal-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.modaal-content-container {
+  max-width: 100%;
+  height: auto;
+}
+
+.news h1 {
+  font-size: 3vw;
+  padding: 3% 0 0 0;
+}
+
+.news h2 {
+  font-size: 1.2vw;
+}
+
+.news ul {
+  list-style: none;
+  margin-left: -6.2%;
+}
+
+.news li {
+  margin-bottom: -1px;
+  border-bottom: 1px solid #333;
+}
+
+.news ul li {
+  font-size: 1vw;
+  color: #333;
+}
+
+.news a {
+  color: #333;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  width: 100%;
+  padding: 3%;
+}
+
+.news a:hover {
+  color: #ffffff;
+}
+
+.news p {
+  font-size: 1.2vw;
+}
+
+.news ul:hover {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.8s, color 0.8s;
+}
+
+.news-link {
+  margin-top: 4%;
+  margin-left: 67%;
+}
+
+.news-link a {
+  color: #333;
+  font-size: 2vw;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  transition: color 0.5s;
+}
+
+.news-page01 {
+  width: 96%;
+  height: auto;
+  padding-left: 3%;
+}
+
+.news-page01 h2 {
+  font-size: 1.5vw;
+}
+
+.news-page01 p {
+  font-size: 1.2vw;
+}
+
+.news-page01 img {
+  width: 100%;
+  height: auto;
+}
+
+.news-page02 h2 {
+  font-size: 1.5vw;
+}
+
+.news-page02 p {
+  font-size: 1.2vw;
+}
+
+.news-page02 img {
+  width: 100%;
+  height: auto;
+}
+
+/* マウスオーバー時のスタイル */
+.news-link a:hover {
+  color: #a1a1a1;
+}
+
+/*ニューススタイルとディスコグラフィー*/
+.parent-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*ディスコグラフィー*/
+.discography {
+  margin: 0;
+}
+
+.discography h1 {
+  font-size: 3vw;
+  padding: 3% 0 0 6%;
+}
+
+.discography h2 {
+  text-align: center;
+  font-size: 2.5vw;
+  margin-bottom: 0;
+  padding-right: 8%;
+}
+
+.discography p {
+  font-size: 1vw;
+  text-align: center;
+  margin-top: 0;
+  padding-right: 8%;
+}
+
+.discography-link {
+  text-align: right;
+}
+
+.discography-link a {
+  color: #333;
+  font-size: 2vw;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  outline: none;
+  margin-top: 2.8%;
+  transition: color 0.5s;
+}
+
+.discography img {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 5% 20% 1%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/*ALBUM SINGLE 交互に表示*/
+.music-item {
+  position: absolute;
+  width: 50%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.music-item.show {
+  width: 50%;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* マウスオーバー時のスタイル */
+.discography-link a:hover {
+  color: #a1a1a1;
+}
+
+/* NEWSとDISCOGRAPHYの間の余白を調整 */
+.news,
+.discography {
+  flex-basis: 47%;
+}
+
+.parent-container>div:not(:last-child) {
+  border-right: 3px solid #000;
+}
+
+/*YOUTUBEのスタイル*/
+.video {
+  max-width: 100%;
+  aspect-ratio: 560/315;
+}
+
+.video h1 {
+  font-size: 3vw;
+  padding: 1% 0 1% 3%;
+  background-color: #000;
+  color: aliceblue;
+}
+
+.video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* メンバープロフィールのスタイル */
+.profile {
+  padding: 1%;
+  padding-bottom: 3%;
+}
+
+.profile h1 {
+  height: 0;
+  font-size: 3vw;
+  padding: 1% 0 4% 2%;
+}
+
+.profile h3 {
+  text-align: right;
+}
+
+.profile p {
+  margin-top: 40%;
+  padding: 20%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.3vw;
+}
+
+.profile-link a {
+  top: 0;
+  padding-right: 2%;
+  color: #333;
+  text-decoration: none;
+  font-size: 2vw;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  transition: color 0.5s;
+}
+
+.profile-wrapper {
+  display: flex;
+  opacity: 0;
+}
+
+.profile img {
+  margin-left: 2%;
+  padding-right: 7.5%;
+  width: 50%;
+  height: auto;
+}
+.profile-text{
+  display: flex;
+}
+/* マウスオーバー時のスタイル */
+.profile-link a:hover {
+  color: #a1a1a1;
+}
+
+/*hover時に矢印が移動*/
+.profile-link a:hover span::after {
+  right: 15px;
+}
+
+/*文字をふわっと表示*/
+.animated-text {
+  opacity: 0;
+  transform: translateY(20px);
+  /* 初期状態で上に10px移動 */
+  transition: opacity 1s, transform 1s;
+  /* アニメーションの設定 */
+}
+
+/* グッズ画像のスタイル */
+.store h1 {
+  height: 0;
+  font-size: 3vw;
+  padding: 2% 0 0 3%;
+}
+
+.store h3 {
+  text-align: right;
+  margin: 5% 3% 1% 0;
+}
+
+.store p {
+  font-size: 1.5vw;
+}
+
+.store a {
+  color: #333;
+  text-decoration: none;
+  font-size: 2vw;
+  transition: color 0.5s;
+}
+
+.store img {
+  width: 30%;
+  height: auto;
+}
+
+/*ストア スワイパー*/
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.slider-button button {
+  padding: 8px 15px;
+  border: 3px solid #333;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.slider-button button:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* マウスオーバー時のスタイル */
+.store-link a:hover {
+  color: #a1a1a1;
+}
+
+/*フッター*/
+.footer {
+  margin-top: 10%;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 1%;
+}
+
+.footer-nav li {
+  margin: 5%;
+  margin-bottom: 1%;
+  margin-left: 8%;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid transparent;
+  /* 初期状態では透明な下線を設定 */
+  transition: border-bottom-color 0.3s;
+  /* 下線の変化をアニメーション化 */
+  font-size: 1vw;
+}
+
+.footer-nav li a:hover {
+  border-bottom: 1px solid #000;
+  border-bottom-color: #333;
+  /* マウスホバー時に下線の色を変更 */
+}
+
+.footer-nav img {
+  width: 3%;
+  border-radius: 50%;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  padding-top: 1%;
+}
+
+#social-logo {
+  text-align: center;
+  margin-right: 2.5%;
+}
+
+.social-text {
+  margin-right: 4%;
+  font-size: 1vw;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+small {
+  margin-left: 46.7%;
+}
+
+/*レスポンシブ*/
+@media screen and (max-width:768px) {
+  body {
+    border: none;
+    /* bodyの線をなくす */
+    margin: 0;
+    /* ボディのマージンを0に設定 */
+    padding: 0;
+    /* ボディのパディングを0に設定 */
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .hamburger-nav {
+    width: 100%;
+    padding: 0;
+    left: -700px;
+  }
+
+  .hamburger-nav ul {
+    margin-top: 20%;
+  }
+
+  .hamburger-nav ul li {
+    margin: 0;
+    border-bottom: 0;
+    text-align: center;
+  }
+
+  .hamburger-nav a {
+    font-size: 18px;
+    margin: 0;
+    padding: 7%;
+  }
+
+
+  .news h1 {
+    font-size: 50px;
+    margin-left: 20px;
+  }
+
+  h3.news-link {
+    margin: 0 30px 0 0;
+    padding: 0;
+  }
+
+  .news-link a {
+    margin-left: 70%;
+    width: 30%;
+  }
+
+  .news h2 {
+    font-size: 20px;
+  }
+
+  .news li {
+    padding: 5%;
+  }
+
+  .news a {
+    font-size: 24px;
+  }
+
+  .news p {
+    font-size: 20px;
+  }
+
+  .news a:hover {
+    color: inherit;
+    /* ホバー時のスタイルを無効化 */
+  }
+
+  .news ul:hover {
+    background-color: transparent;
+    color: #333;
+    transition: none;
+  }
+
+  .news-link a {
+    text-align: center;
+  }
+
+  .news-page01 h2 {
+    font-size: 18px;
+  }
+
+  .news-page01 p {
+    font-size: 14px;
+  }
+
+  .news-page02 h2 {
+    font-size: 18px;
+  }
+
+  .news-page p {
+    font-size: 14px;
+  }
+
+  .discography {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60%;
+    margin-left: 5%;
+  }
+
+  .discography a {
+    font-size: 24px;
+    margin-right: 5%;
+  }
+
+  .discography h1 {
+    font-size: 45px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  .music-item {
+    margin-left: 50px;
+    margin-top: 10%;
+  }
+
+  .music-item h2 {
+    font-size: 24px;
+    margin-left: 57%;
+  }
+
+  .music-item p {
+    font-size: 12px;
+    margin-left: 57%;
+  }
+
+
+  .discography img {
+    width: 100%;
+    height: auto;
+    margin-top: 60%;
+    /* 上と左の余白を調整 */
+  }
+
+  .news,
+  .discography {
+    width: 100%;
+    flex-basis: auto;
+    border-right: none;
+  }
+
+  .video {
+    margin-top: 20%;
+  }
+
+  .video h1 {
+    font-size: 45px;
+  }
+
+  .profile img {
+    width: 100%;
+    margin-left: 0;
+    padding-right: 0;
+    font-size: 50px;
+  }
+.profile-wrapper{
+  display: block;
+}
+.profile-text{
+  display: flex;
+  justify-content: center;
+  padding: 25%;
+}
+  .profile h1 {
+    font-size: 45px;
+  }
+
+  .profile p {
+    font-size: 18px;
+  }
+
+  .profile a {
+    margin-top: 10%;
+    font-size: 24px;
+  }
+
+  .store h1 {
+    font-size: 50px;
+  }
+
+  .swiper-slide {
+    margin-top: 10%;
+  }
+
+  .store a {
+    font-size: 24px;
+  }
+
+  .store p {
+    font-size: 20px;
+  }
+
+  h3.store-link {
+    margin-top: 15%;
+  }
+
+  .footer-nav a {
+    font-size: 12px;
+  }
+
+  small {
+    font-size: 12px;
+    margin-left: 38%;
+  }
+  .footer-nav img{
+    width:5%;
+  }
+  a#top-link {
+    font-size: 0px;
+  }
+  #top-link img{
+    display: none;
+  }
+}

@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/*tabの形状*/
+.tab{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 5% 0 5%; 
+}
+.tab li a{
+  display: block;
+  padding:20px;
+  font-size: 1.5vw;
+}
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a{
+  background: #fff;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;/*はじめは非表示*/
+  opacity: 0;/*透過0*/
+  background: #fff;
+  padding:3% 2%;
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+    display: block;/*表示*/
+    animation-name: displayAnime;/*ふわっと表示させるためのアニメーション*/
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes displayAnime{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+body{
+  background: #fff;
+  max-width: 100%;
+}
+ul{
+  list-style:none;
+}
+h1{
+  font-size: 4vw;
+  padding: 2% 0 3% 5%;
+}
+a{
+  color:#000000;
+  text-decoration: none;
+  margin-top: 1.4px;
+}
+
+.wrapper{
+  width:100%;
+}
+
+
+
+.profile01 h2 {
+  width: 100%;
+  font-size: 1.8vw;
+  padding-left: 15%;
+}
+.profile01 p{
+  font-size: 1vw;
+  line-height: 300%;
+}
+
+.profile01 img {
+  width: 70%;
+  height: auto;
+  padding-left: 15%;
+}
+
+
+.profile02 {
+  display: flex;
+  margin: 2%;
+}
+.profile02 h2 {
+  width: 35%;
+  padding-left: 10%;
+  font-size: 1.8vw;
+}
+.profile02 p{
+  margin-top: 20%;
+  font-size: 1.2vw;
+  line-height: 200%;
+  border-bottom: 1px solid #333;
+  width: 100%;
+}
+
+.profile02 img {
+  width: 40%;
+  height: auto;
+  padding-left: 7%;
+}
+
+.footer-nav ul{
+  margin-bottom: 2%;
+}
+/*レスポンシブ*/
+@media screen and (max-width:768px) {
+
+  h1 {
+    font-size: 50px;
+    margin-left:5%;
+  }
+
+  .profile01{
+    width: 100%;
+    padding: 0;
+  }
+  .profile02{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile01 h2{
+    font-size: 16px;
+    align-items: center;
+  }
+  .profile01 p{
+    font-size: 12px;
+    line-height: normal;
+  }
+  .profile02 h2{
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+  }
+  .profile01 p{
+      width: 70%;
+  }
+  .profile02 p {
+    margin-top: 5%;
+    font-size: 13px;
+  }
+
+  .profile01 img{
+    max-width: 100%;
+    padding: 0;
+    margin-left: 60px;
+  }
+  .profile02 img{
+    max-width: 100%;
+    padding: 0;
+    margin-left: 0px;
+  }
+  ul.tab a{
+    font-size: 12px;
+  }
+}

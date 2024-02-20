@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>羊文学</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/store.css">
+</head>
+
+<body>
+  <a href="#top" id="top-link">TOP<img src="images/logo04.jpg" alt=""></a>
+  <!-- ヘッダーエリア -->
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="header-logo">
+        <a href="index.html"><img src="images/logo01.png" alt=""></a>
+      </div>
+      <nav>
+        <ul class="navigation-main">
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="discography.html">DISCOGRAPHY</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li><a href="store.html">STORE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <hr>
+  <!--ハンバーガーメニュー-->
+  <div id="navArea">
+    <nav class="hamburger-nav">
+      <div class="inner">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="news.html">NEWS</a></li>
+          <li><a href="discography.html">DISCOGRAPHY</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li><a href="store.html">STORE</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div id="mask"></div>
+  </div>
+
+
+  <div class="cart">
+    <div class="cart_cnt hidden">
+      <span id="js_cart_cnt"></span>
+    </div>
+    <a href="cart.html"><img src="images/store-image/logo-cart.png"></a>
+  </div>
+  <h1>STORE</h1>
+  <div id="wrapper">
+    <div class="item_wrapper">
+      <ul class="item_list">
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image01.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>メンバーフォトロンT2023<br>【ホワイト】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">4500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="4500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="メンバーフォトロンT2023【ホワイト】"
+                data-price="4500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image07.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>メンバーフォトロンT2023<br>【ブラック】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">4500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="4500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="メンバーフォトロンT2023【ブラック】"
+                data-price="4500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image04.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>ひつじちゃんモバイル<br>ストラップ</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">2500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="2500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="メンバーフォトロンT2023【ブラック】"
+                data-price="2500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image05.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>ひつじちゃんパズル<br>キーホルダー</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">800</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="800">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="ひつじちゃんパズルキーホルダー" data-price="800">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image08.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>バンド・スコア 羊文学<br>「our hope」</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3300</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3300">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="バンド・スコア 羊文学「our hope」"
+                data-price="3300">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image02.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる Tシャツ 2022<br>【チャコール】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる Tシャツ 2022【チャコール】"
+                data-price="3500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image09.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる Tシャツ 2022<br>【ベージュ】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる Tシャツ 2022【ベージュ】"
+                data-price="3500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image03.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる パーカー 2022<br>【ネイビー】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">6500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="6500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる パーカー 2022【ネイビー】"
+                data-price="6500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image06.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる トートバッグ 2022<br>【ホワイト】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">2500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="2500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる トートバッグ 2022【ホワイト】"
+                data-price="2500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image10.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる バスタオル <br>2022</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる バスタオル 2022"
+                data-price="3500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image11.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる ボールペン<br> 2022</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">300</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="300">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる ボールペン 2022"
+                data-price="300">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image12.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえる レターセット<br> 2022</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">1800</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="1800">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえる レターセット 2022"
+                data-price="1800">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image13.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>まほうがつかえるピンバッジ<br>2022</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">1000</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="1000">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="まほうがつかえるピンバッジ2022" data-price="1000">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image14.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>羊文学Photobook <br>“OOPARTS”</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">2500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="2500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="羊文学Photobook “OOPARTS”"
+                data-price="2500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image15.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>メンバーフォトTシャツ<br>【ホワイト】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="メンバーフォトTシャツ【ホワイト】" data-price="3500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image16.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>メンバーフォトTシャツ<br>【ブラック】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="メンバーフォトTシャツ【ブラック】" data-price="3500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image17.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>ひつじちゃんタオル <br>【ネイビー】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">1500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="1500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="ひつじちゃんタオル 【ネイビー】" data-price="1500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image18.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>ひつじちゃんタオル<br>【ホワイト】</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">1500</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="1500">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="ひつじちゃんタオル【ホワイト】" data-price="1500">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image19.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>OOPARTS Tシャツ<br>［ホワイト］</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3000</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3000">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="OOPARTS Tシャツ［ホワイト］"
+                data-price="3000">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item_img">
+            <img src="images/store-image/image20.webp" alt="">
+          </div>
+          <div class="item_textbox">
+            <div class="item_title">
+              <h3>our hope Tシャツ<br>［ホワイト］</h3>
+            </div>
+            <div class="item_price">値段 : <span class="js_get_price">3000</span>円</div>
+            <div class="item_quantity">
+              <label for="quantity_baumkuchen">個数：</label>
+              <select class="js_quantity_select" data-price="3000">
+                <option value="1">1個</option>
+                <option value="2">2個</option>
+                <option value="3">3個</option>
+                <option value="4">4個</option>
+                <option value="5">5個</option>
+              </select>
+            </div>
+            <div class="item_btnarea">
+              <button class="item_cart_btn js_cart_btn" data-name="our hope Tシャツ［ホワイト］"
+                data-price="3000">カートに入れる</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- フッターエリア -->
+  <footer>
+    <div id="footer-wrapper">
+      <div class="footer">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="news.html">NEWS</a></li>
+
+            <li> <a href="profile.html">PROFILE</a></li>
+
+            <li><a href="discography.html">DISCOGRAPHY</a></li>
+
+            <li> <a href="store.html">STORE</a></li>
+          </ul>
+          <div id="footer-social">
+            <div id="social-logo">
+              <a href="https://twitter.com/hitsujibungaku" target="_blank"><img src="images/logo-sns02.jpg"></a>
+              <a href="https://www.instagram.com/hitsujibungaku/" target="_blank"><img src="images/logo-sns01.jpg"></a>
+              <a href="https://www.youtube.com/channel/UCm0qsuAG6RN2FYKZ_r1nPyg" target="_blank"><img
+                  src="images/logo-sns04.jpg"></a>
+              <a href="https://www.tiktok.com/@hitsujibungaku_official" target="_blank"><img
+                  src="images/logo-sns03.jpg"></a>
+            </div>
+            <small>© hitujibungaku</small>
+          </div>
+      </div>
+      </nav>
+    </div>
+    </div>
+  </footer>
+  <script>
+    let nav = document.querySelector("#navArea");
+    let btn = document.querySelector(".toggle-btn");
+    let mask = document.querySelector("#mask");
+
+    btn.onclick = () => {
+      nav.classList.toggle("open");
+    };
+
+    mask.onclick = () => {
+      nav.classList.toggle("open");
+    };
+  </script>
+  <script src="js/store.js"></script>
+</body>
+
+</html>

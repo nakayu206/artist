@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+/* Centering Wrapper */
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 50%;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+}
+
+.back_btn_wrapper {
+  text-align: center;
+  margin: 2% 2% 2% 40%;
+  background-color: #007bff;
+  width: 20%;
+  padding: 1% 2%;
+  border-radius: 4px;
+  font-size: 1vw;
+}
+
+.back_btn {
+  text-decoration: none;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2vw;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1vw;
+}
+
+#js_shopping_list {
+  list-style: none;
+  font-size: 1vw;
+  text-align: center;
+  padding: 5%;
+}
+
+.total {
+  margin: 5%;
+  text-align: right;
+  font-size: 2vw;
+}
+
+.confirm_btn {
+  display: block;
+  margin: 0 auto;
+  padding: 1% 2%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+#js_shopping_list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  font-size: 1vw;
+}
+
+#js_shopping_list img {
+  width: 20%;
+}
+
+@media screen and (max-width:768px) {
+  #js_shopping_list li {
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+  .total {
+    font-size: 16px;
+  }
+
+  .back_btn_wrapper {
+    font-size: 12px;
+  }
+  #js_shopping_list li img {
+    width: 50%;
+    /* 大きさを調整してください */
+    height: auto;
+  }
+  .confirm_btn{
+    font-size: 12px;
+  }
+  h1{
+    font-size: 16px;
+  }
+}

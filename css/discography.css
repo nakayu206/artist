@@ -1,0 +1,315 @@
+@charset "UTF-8";
+
+/*========= レイアウトのためのCSS ===============*/
+body {
+  background: #fff;
+  max-width: 100%;
+}
+
+h1 {
+  font-size: 4vw;
+  padding: 2% 0 3% 5%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.5vw;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  text-align: center;
+  font-size: 1vw;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 30vw;
+  /*スライダー内の画像を60vwにしてレスポンシブ化*/
+  height: auto;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);
+  /*左右の画像のサイズを80%に*/
+  transition: all .5s;
+  /*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;
+  /*透過50%*/
+}
+
+.slider .slick-slide.slick-center {
+  transform: scale(1);
+  /*中央の画像のサイズだけ等倍に*/
+  opacity: 1;
+  /*透過なし*/
+}
+
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 40%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #333;
+  /*矢印の色*/
+  border-right: 2px solid #333;
+  /*矢印の色*/
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -3%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -3%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+  text-align: center;
+  margin: 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 16px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+
+.tab {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+  margin: 0 5% 0 6%;
+}
+
+.tab li a {
+  display: block;
+  padding: 2% 20px;
+  font-size: 1.5vw;
+  margin: 3px;
+}
+
+/*liにactiveクラスがついた時の形状*/
+.tab li.active a {
+  border-bottom: 1px solid#333;
+}
+
+
+/*エリアの表示非表示と形状*/
+.area {
+  display: none;
+  /*はじめは非表示*/
+  opacity: 0;
+  /*透過0*/
+  background: #fffefe;
+  padding: 3% 2%;
+}
+
+.discography-contents img:hover {
+  transform: scale(1.1);
+  /* 拡大 */
+}
+
+/*areaにis-activeというクラスがついた時の形状*/
+.area.is-active {
+  display: block;
+  /*表示*/
+  animation-name: displayAnime;
+  /*ふわっと表示させるためのアニメーション*/
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  background: #fff;
+}
+
+@keyframes displayAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.discography-contents {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20%;
+  background: #fff;
+}
+
+.discography-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3つずつ横並び */
+  gap: 8%;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.discography-list li {
+  text-align: center;
+  padding: 10px;
+  font-size: 1vw;
+}
+
+.discography-contents img {
+  width: 100%;
+  height: auto;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: transform .3s ease;
+  /* ゆっくり変化させる */
+  position: relative;
+}
+
+.disc {
+  position: absolute;
+  top: 60%;
+  left: 1%;
+}
+
+.disc img {
+  width: 25%;
+  box-shadow: none;
+}
+
+.discography-contents img:hover {
+  transform: scale(1.04);
+  /* マウスオーバー時の拡大 */
+  box-shadow: 4px 8px 12px rgba(0, 0, 0, 0.8);
+  /* 影の効果を強化 */
+}
+
+.discography-list h2 {
+  font-size: 1.3vw;
+}
+
+.discography-list p {
+  margin-top: 10px;
+  font-size: 1vw;
+}
+
+p.date {
+  margin-bottom: 2%;
+}
+
+.footer-nav ul {
+  margin-bottom: 2%;
+}
+
+/*レスポンシブ*/
+@media screen and (max-width:768px) {
+
+
+  h1 {
+    font-size: 40px;
+    margin-left: 10%;
+  }
+  .slider {
+    width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none;
+  }
+
+  .slick-dots button {
+    display: none;
+  }
+
+  .slider img {
+    width: 50vh;
+  }
+
+  .tab li.active a {
+    border: none;
+    font-size: 18px;
+  }
+
+  .wrapper li a {
+    font-size: 18px;
+  }
+
+  .discography-list {
+    grid-template-columns: repeat(1, 1fr);
+    /* 3つずつ横並び */
+    gap: 0;
+    margin-bottom: 50%;
+  }
+  .discography-contents{
+    margin-bottom: 0;
+  }
+ .discography-contents ul li h2{
+  font-size: 24px;
+ }
+ .discography-contents ul li p{
+  font-size: 18px;
+ }
+  .footer-nav ul li a {
+    font-size: 12px;
+  }
+}
